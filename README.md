@@ -1,88 +1,128 @@
 # PhD Research Template
 
-This repository provides a structured, systems-thinking template for organizing a PhD research project. It was created to support Qualifying Exam (QE) preparation, help clarify scientific reasoning, and document how ideas, methods, and decisions evolve over time. It is designed to reduce fragmentation across notebooks, documents, and email threads by offering a durable, modular structure that can scale with the complexity of your work.
+A structured, science-centered template to plan, document, and evolve a research project across its full lifecycle.
+Designed for clarity, reproducibility, and deep reasoning.
 
-Each folder corresponds to a core function in the research lifecycle: defining the scientific problem, designing the analysis, documenting results, managing collaboration, and tracking iteration.
+## Purpose
 
-## 📁 research-design/
+This repository is designed for PhD students or researchers who want to scaffold their research project from hypothesis
+generation through results interpretation, manuscript preparation, and communication. It supports iterative
+reflection, decision tracking, and systems-level thinking throughout the scientific process.
 
-Captures the scientific rationale, conceptual model, and evolving questions.
+The goal is to help you clarify:
 
-- `overview.md` – Title, phase, collaborators, and scope
-- `problem_statement.md` – Core scientific question and rationale
-- `working_hypotheses.md` – Primary/alternate hypotheses and how to falsify them
-- `system_structure.md` – Levels of analysis, unit of study, system boundaries
-- `distinctions.md` – Defined categories (e.g., case/control), in-/out-of-scope boundaries
-- `mental_model.md` – Diagram or narrative of your working model and assumptions
-- `perspectives.md` – Stakeholder views, who benefits, who is excluded
-- `knowledge_gaps.md` – Gaps in the literature or field
-- `unanswered_questions.md` – Hypotheses or models not yet tested
-- `thesis_proposal_outline.md` – Structured outline for your QE proposal
+- What you're asking  
+- Why it matters  
+- How you're testing it  
+- What you've assumed, observed, or ruled out  
 
-## 📁 methods/
+It combines grant-writing, documentation, and analysis preparation into a flexible but science-specific structure.
 
-Outlines analytic plans, tool selection, assumptions, and reproducibility strategy.
+## Who This Is For
 
-- `analysis_plan.md` – High-level plan for each aim or hypothesis
-- `method_assumptions.md` – Assumptions embedded in design or inference
-- `pipeline_decisions.md` – Summary of analysis pipeline structure
-- `tool_comparisons.md` – Tools considered, used, or rejected with justifications
-- `controls_and_nulls.md` – Baselines, control logic, and null model notes
-- `data_sources.md` – Metadata and notes on datasets used or referenced
-- `ethics_equity_practicalities.md` – Bias, inclusion, sovereignty, and compute access
-- `data_and_software_doc.md` – Codebase, containers, file formats, software used
+- New PhD students beginning a thesis or rotation project  
+- Researchers seeking a consistent way to document decisions over time  
+- Advisors and collaborators onboarding into an evolving project  
+- Anyone who wants to develop, track, and communicate scientific reasoning clearly  
 
-## 📁 results/
+You do not need to know how to code. This structure works well with Markdown, GitHub, and MkDocs (optional)
+for versioning and rendering a documentation site.
 
-Collects major findings, interpretations, and framing aids for communication.
+## Folder Structure and Explanation
 
-- `summary_findings.md` – Key discoveries and supporting evidence
-- `interpretation_notes.md` – Relevance to hypotheses and field context
-- `audience_pitches.md` – Tailored summaries for expert, general, or clinical audiences
-- `metaphors_and_visuals.md` – Narrative, visual, or metaphorical framing tools
-- `deferred_features.md` – Future directions, modular extensions, or postponed analyses
+### research-design
 
-## 📁 collaboration/
+Documents conceptual framing, system modeling, and scientific rationale.
 
-Tracks contributor roles, review points, and continuity planning.
+- `overview.md`: High-level summary of the research topic and why it matters.  
+- `design_type.md`: Defines whether the design is experimental, quasi-experimental, observational, etc.  
+- `problem_statement.md`: Concise articulation of the research problem being addressed.  
+- `knowledge_gaps.md`: What’s missing in the literature or datasets; motivates your work.  
+- `working_hypotheses.md`: Testable statements you aim to validate or challenge.  
+- `system_structure.md`: Diagram or description of relationships between components (e.g., genes, phenotypes, datasets).  
+- `perspectives.md`: Viewpoints that shape the framing of the problem (e.g., clinical, mechanistic, systems-level).  
+- `distinctions.md`: Important boundaries (e.g., disease vs. phenotype, variant vs. artifact).  
+- `mental_model.md`: Your evolving conceptual map of how you think the system behaves.  
+- `unanswered_questions.md`: Open problems or edge cases you want to revisit.  
+- `thesis_proposal_outline.md`: Outline for formal PhD proposal or grant.
 
-- `project_roles.md` – Mapping of PI, co-PI, student, postdoc, etc.
-- `review_calendar.md` – Timeline of internal reviews and committee check-ins
-- `handoff_plan.md` – Continuity planning in case of transition or absence
-- `sustainability_notes.md` – Post-graduation or post-publication stewardship plans
+### methods
 
-## 📁 tracking/
+Tracks data sources, assumptions, and analytical decisions.
 
-Captures change over time: decisions, risks, feedback, and next steps.
+- `data_sources.md`: Primary datasets used, including sample counts and metadata context.  
+- `data_and_software_doc.md`: Describes formats, schemas, and data provenance.  
+- `pipeline_decisions.md`: What tools or workflows you chose and why.  
+- `tool_comparisons.md`: Evaluations of alternative software or pipelines.  
+- `controls_and_nulls.md`: How negative controls, null models, or baselines are used.  
+- `method_assumptions.md`: Statistical and computational assumptions that underpin your approach.  
+- `analysis_plan.md`: Primary and secondary analyses, including planned figures and outputs.  
+- `ethics_equity_practicalities.md`: Any IRB, consent, or inclusion/exclusion considerations relevant to your population or dataset.
 
-- `iteration_log.csv` – Date-stamped changes to design, methods, framing, or assumptions
-- `key_decisions.md` – Log of high-impact decisions and justifications
-- `risks_and_mitigation.md` – Known or anticipated bottlenecks with mitigation plans
-- `next_steps.md` – Short-term actions that advance the project
-- `committee_feedback_log.md` – Notes from QE prep or committee feedback cycles
-- `project_timeline.md` – Chronological roadmap of project phases, milestones, and deadlines
+### tracking  
 
-## Glossary of Key Concepts
+Tracks the evolution of your project, decisions, and timelines.
 
-**Working Hypothesis**  
-A specific, testable statement of what you expect based on your model of the system.
+- `project_timeline.md`: Milestones, proposed phases, and deadlines.  
+- `key_decisions.md`: Log of irreversible or consequential choices with rationale.  
+- `committee_feedback_log.md`: Running notes from thesis committee or advisors.  
+- `iteration_log.csv`: What changed, when, and why (structured like a changelog).  
+- `risks_and_mitigation.md`: Known risks (e.g., missing data, tool limitations) and your mitigation strategy.  
+- `next_steps.md`: Running list of tasks and priorities.
 
-**System Structure**  
-The interacting biological, computational, or regulatory components of your study—e.g., variant → gene → pathway → phenotype.
+### collaboration
 
-**Distinctions**  
-Explicit boundaries you define—what's in scope, what's out, and how categories like case/control or modifier/driver are assigned.
+Defines team roles, review plans, and sustainability for long-term projects.
 
-**Mental Model**  
-Your internal concept of how the system works, usually structured as logic, a schematic, or narrative.
+- `project_roles.md`: Describes roles and responsibilities of collaborators.  
+- `handoff_plan.md`: In case you step away or onboard new collaborators.  
+- `review_calendar.md`: Plan for regular meetings, checkpoints, or manuscript prep.  
+- `sustainability_notes.md`: Ideas for long-term maintenance, reuse, or extensions of the work.
 
-**Null Model**  
-A baseline or control model used to determine whether observed effects differ from randomness or expectation.
+### results  
 
-**Perspective**  
-The implicit or explicit point of view driving the study—e.g., clinical, statistical, systems biology.
+Captures interpretations, ideas for translation, and summaries for varied audiences.
 
-**Iteration Log**  
-A living document that tracks conceptual, methodological, and practical shifts across the life of the project.
+- `summary_findings.md`: Concise summary of core discoveries.  
+- `interpretation_notes.md`: Notes about how to interpret trends, gaps, or caveats in your findings.  
+- `audience_pitches.md`: Tailored explanations for different audiences (e.g., clinicians, grant reviewers, peers).  
+- `deferred_features.md`: Interesting signals or patterns not explored yet.  
+- `metaphors_and_visuals.md`: Analogies, draft figures, or ways to visualize the science.
 
-This structure is meant to evolve with your thinking. It’s not just for documentation—it's a scaffold for clarity, strategy, and accountability.
+## Quick Glossary
+
+If you're not up to speed on what some of the words here may mean, check out this [quick glossary](glossary.md).
+
+## Why This Template Exists
+
+PhD research is nonlinear. Assumptions shift. Collaborators change. Pipelines evolve.
+
+This structure helps you:
+
+- Track how your thinking develops  
+- Document design and analytical decisions  
+- Improve reproducibility and clarity  
+- Share work with others without ambiguity
+
+## Optional Features
+
+You can use:
+
+- [MkDocs](https://www.mkdocs.org/) to render this as browsable documentation  
+- GitHub Actions to automatically build and deploy documentation  
+- GitHub template features to let others duplicate the structure easily  
+
+See `docs/` or `.github/workflows/` to learn more.
+
+## Getting Started
+
+1. Clone or duplicate this repository  
+2. Fill in `README.md`, `project_pulse.md`, and `working_hypotheses.md`  
+3. Add your own tools, workflows, and project-specific markdowns  
+4. Regularly update `iteration_log.csv` and `project_timeline.md`  
+
+This is meant to evolve with you.
+
+## 🧾 License
+
+MIT License. Use freely with attribution.
