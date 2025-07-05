@@ -37,7 +37,7 @@ Documents conceptual framing, system modeling, and scientific rationale.
 - `overview.md`: High-level summary of the research topic and why it matters.  
 - `design_type.md`: Defines whether the design is experimental, quasi-experimental, observational, etc.  
 - `problem_statement.md`: Concise articulation of the research problem being addressed.  
-- `knowledge_gaps.md`: What’s missing in the literature or datasets; motivates your work.  
+- `knowledge_gaps.md`: What's missing in the literature or datasets; motivates your work.  
 - `working_hypotheses.md`: Testable statements you aim to validate or challenge.  
 - `system_structure.md`: Diagram or description of relationships between components (e.g., genes, phenotypes, datasets).  
 - `perspectives.md`: Viewpoints that shape the framing of the problem (e.g., clinical, mechanistic, systems-level).  
@@ -111,11 +111,46 @@ This structure helps you:
 
 You can use:
 
-- [MkDocs](https://www.mkdocs.org/) to render this as browsable documentation  
+- **[MkDocs](https://www.mkdocs.org/)** to render this as browsable documentation  
 - GitHub Actions to automatically build and deploy documentation  
 - GitHub template features to let others duplicate the structure easily  
 
-See `docs/` or `.github/workflows/` to learn more.
+### MkDocs Documentation Site
+
+This template includes a complete MkDocs setup for creating a professional documentation website:
+
+- **Professional Documentation**: Creates a polished, searchable website from your markdown files
+- **Easy Navigation**: Hierarchical navigation makes it easy to find specific documents
+- **Version Control**: All changes are tracked in git
+- **Collaboration**: Easy to share with advisors and collaborators
+- **Search**: Built-in search functionality across all documents
+- **Responsive**: Works well on desktop and mobile devices
+
+**Quick Setup**:
+1. Install dependencies: `pip install -r requirements.txt`
+2. Customize `mkdocs.yml` with your project details
+3. Run `mkdocs serve` to preview locally
+4. Deploy to GitHub Pages or other hosting
+
+See [`docs/README.md`](docs/README.md) for detailed setup instructions.
+
+## Documentation Options
+
+### Markdown Files
+All research documentation is written in Markdown, making it easy to:
+- Version control with Git
+- Collaborate through GitHub
+- Edit with any text editor
+- Convert to various formats
+
+### MkDocs Website (Recommended)
+For a more professional presentation, this template includes MkDocs configuration:
+- **Professional appearance** with search and navigation
+- **Automatic deployment** to GitHub Pages
+- **Mobile-responsive** design
+- **Easy sharing** with collaborators and advisors
+
+See [`docs/README.md`](docs/README.md) for complete setup instructions.
 
 ## Getting Started
 
@@ -123,6 +158,7 @@ See `docs/` or `.github/workflows/` to learn more.
 2. Fill in `README.md`, `project_pulse.md`, and `working_hypotheses.md`  
 3. Add your own tools, workflows, and project-specific markdowns  
 4. Regularly update `iteration_log.csv` and `project_timeline.md`  
+5. **Optional**: Set up MkDocs documentation site (see [`docs/README.md`](docs/README.md))
 
 This is meant to evolve with you.
 

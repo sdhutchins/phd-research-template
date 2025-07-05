@@ -1,0 +1,7 @@
+# Python version requirement
+# Requires Python 3.8 or higher
+
+# MkDocs requirements for research template
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
+mkdocs-git-revision-date-localized-plugin>=1.2.0 

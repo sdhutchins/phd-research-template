@@ -57,3 +57,23 @@ results/tmp/
 
 # Secret configs (template provided elsewhere)
 config/secrets.yaml
+
+# MkDocs build output
+site/
+.cache/
+
+# Python environment (if using virtual environment)
+.env
+.venv/
+env/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

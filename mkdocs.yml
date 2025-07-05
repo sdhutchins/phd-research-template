@@ -1,0 +1,154 @@
+# PhD Research Template - MkDocs Configuration
+# This is a template configuration that can be easily customized for any research project
+
+site_name: Research Project Documentation
+site_description: A structured, science-centered research documentation site
+site_author: [Your Name]
+site_url: https://yourusername.github.io/your-repo-name
+
+# Repository information - UPDATE THESE FOR YOUR PROJECT
+repo_name: your-repo-name
+repo_url: https://github.com/yourusername/your-repo-name
+
+# Material theme configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Navigation structure - CUSTOMIZE FOR YOUR PROJECT
+nav:
+  - Home: index.md
+  - Research Design:
+    - Overview: research-design/overview.md
+    - Problem Statement: research-design/problem_statement.md
+    - Working Hypotheses: research-design/working_hypotheses.md
+    - System Structure: research-design/system_structure.md
+    - Knowledge Gaps: research-design/knowledge_gaps.md
+    - Design Type: research-design/design_type.md
+    - Perspectives: research-design/perspectives.md
+    - Distinctions: research-design/distinctions.md
+    - Mental Model: research-design/mental_model.md
+    - Unanswered Questions: research-design/unanswered_questions.md
+    - Thesis Proposal: research-design/thesis_proposal_outline.md
+    - References: research-design/references.md
+  - Methods:
+    - Data Sources: methods/data_sources.md
+    - Analysis Plan: methods/analysis_plan.md
+    - Pipeline Decisions: methods/pipeline_decisions.md
+    - Tool Comparisons: methods/tool_comparisons.md
+    - Controls and Nulls: methods/controls_and_nulls.md
+    - Method Assumptions: methods/method_assumptions.md
+    - Data and Software: methods/data_and_software_doc.md
+    - Ethics and Equity: methods/ethics_equity_practicalities.md
+    - References: methods/references.md
+  - Results:
+    - Summary Findings: results/summary_findings.md
+    - Interpretation Notes: results/interpretation_notes.md
+    - Audience Pitches: results/audience_pitches.md
+    - Deferred Features: results/deferred_features.md
+    - Metaphors and Visuals: results/metaphors_and_visuals.md
+  - Tracking:
+    - Project Timeline: tracking/project_timeline.md
+    - Key Decisions: tracking/key_decisions.md
+    - Committee Feedback: tracking/committee_feedback_log.md
+    - Iteration Log: tracking/iteration_log.csv
+    - Risks and Mitigation: tracking/risks_and_mitigation.md
+    - Next Steps: tracking/next_steps.md
+    - Anticipated QE Questions: tracking/anticipated_qe_questions.md
+  - Collaboration:
+    - Project Roles: collaboration/project_roles.md
+    - Handoff Plan: collaboration/handoff_plan.md
+    - Review Calendar: collaboration/review_calendar.md
+    - Sustainability Notes: collaboration/sustainability_notes.md
+  - Glossary: glossary.md
+  - References: references.md
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+# Markdown extensions for Material theme
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: false
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra CSS and JS
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js 
