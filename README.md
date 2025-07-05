@@ -45,6 +45,7 @@ Documents conceptual framing, system modeling, and scientific rationale.
 - `mental_model.md`: Your evolving conceptual map of how you think the system behaves.  
 - `unanswered_questions.md`: Open problems or edge cases you want to revisit.  
 - `thesis_proposal_outline.md`: Outline for formal PhD proposal or grant.
+- `references.md`: Key papers, reviews, or theories that inform your design.
 
 ### methods
 
@@ -58,6 +59,7 @@ Tracks data sources, assumptions, and analytical decisions.
 - `method_assumptions.md`: Statistical and computational assumptions that underpin your approach.  
 - `analysis_plan.md`: Primary and secondary analyses, including planned figures and outputs.  
 - `ethics_equity_practicalities.md`: Any IRB, consent, or inclusion/exclusion considerations relevant to your population or dataset.
+- `references.md`: Key tools that inform your methods.
 
 ### tracking  
 
@@ -69,6 +71,7 @@ Tracks the evolution of your project, decisions, and timelines.
 - `iteration_log.csv`: What changed, when, and why (structured like a changelog).  
 - `risks_and_mitigation.md`: Known risks (e.g., missing data, tool limitations) and your mitigation strategy.  
 - `next_steps.md`: Running list of tasks and priorities.
+- `anticipated_qe_questions.md`: Questions you expect to face in your qualifying exam or thesis defense, with answers.
 
 ### collaboration
 
@@ -123,6 +126,22 @@ See `docs/` or `.github/workflows/` to learn more.
 
 This is meant to evolve with you.
 
+## Recommended Reading
+
+I made this template with inspiration from *Ten Simple Rules for Defining a Computational Biology Project* by William
+Stafford Noble ([PMCID: PMC9815624](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9815624/)). The paper offers
+practical guidance for formulating, planning, and vetting research ideas in computational biology.
+Many of the ideas in this template align with or extend these ten rules.
+
+Use this as a companion when populating key design and methods documents:
+
+- Rule 1: Start by writing down your idea → `overview.md`
+- Rule 2: Define the research problem → `problem_statement.md`
+- Rule 5: Clarify your hypothesis → `working_hypotheses.md`
+- Rule 6: Sketch your methodological approach → `analysis_plan.md`
+- Rule 7: Identify usable data sources → `data_sources.md`
+- Rule 10: Share with collaborators → `project_roles.md`
+
 ## 🧾 License
 
-MIT License. Use freely with attribution.
+[MIT License](LICENSE). Use freely with attribution.

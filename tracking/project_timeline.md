@@ -12,8 +12,6 @@
 | Manuscript outline           | YYYY-MM-DD  | ⬜ Not Started|                              |
 | Code & data freeze           | YYYY-MM-DD  | ⬜ Not Started| For publication handoff      |
 
----
-
 ## 📅 Gantt-style View (optional)
 
 Use [this tool](https://github.com/dhaitz/milestones) or manually draw timelines if needed.
