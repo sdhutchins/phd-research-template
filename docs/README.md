@@ -4,32 +4,47 @@ This directory contains the MkDocs configuration and documentation files for the
 
 ## Quick Start
 
-### Automatic Deployment (Recommended)
+If you're using this template for your research project, here's what you need to do:
+
+### 1. Initial Setup
 
 1. **Enable GitHub Pages**:
    - Go to your repository Settings → Pages
    - Set "Source" to "Deploy from a branch"
-   - Select "gh-pages" branch
+   - Select "gh-pages" branch (will be created automatically)
    - Click Save
 
-2. **Update configuration**:
-   - Edit `mkdocs.yml` with your project details
-   - Update `docs/index.md` for your specific project
-
-3. **Push changes**:
-   ```bash
-   git add .
-   git commit -m "Update documentation"
-   git push
+2. **Update project details** in `mkdocs.yml`:
+   ```yaml
+   site_name: Your Research Project Name
+   site_author: Your Name
+   repo_name: your-repo-name
+   repo_url: https://github.com/yourusername/your-repo-name
    ```
 
-4. **Your site will be deployed automatically** to `https://yourusername.github.io/your-repo-name`
+3. **Customize the homepage** in `docs/index.md`:
+   - Update the title and description
+   - Add your specific research information
+   - Update the license link to point to your repository
 
-### Manual Setup
+### 2. Automatic Deployment (Recommended)
+
+The template includes a GitHub Actions workflow that automatically:
+- Builds your documentation site
+- Deploys to GitHub Pages
+- Updates on every push to main/master
+
+**To use it**:
+1. Push your changes to trigger the workflow
+2. Your site will be available at `https://yourusername.github.io/your-repo-name`
+
+### 3. Manual Setup (Alternative)
+
+If you prefer to work locally:
 
 1. **Install dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install mkdocs-material
    ```
 
 2. **Run the setup script**:
@@ -43,12 +58,7 @@ This directory contains the MkDocs configuration and documentation files for the
    mkdocs serve
    ```
 
-4. **Build the site**:
-   ```bash
-   mkdocs build
-   ```
-
-5. **Deploy manually** (optional):
+4. **Deploy manually**:
    ```bash
    mkdocs gh-deploy --force
    ```
@@ -57,14 +67,13 @@ This directory contains the MkDocs configuration and documentation files for the
 
 ```
 docs/
-├── index.md # Homepage content
+├── index.md              # Homepage content (customize this!)
 ├── stylesheets/
-│ └── extra.css # Custom styles
+│   └── extra.css        # Custom styles
 ├── javascripts/
-│ └── mathjax.js # MathJax configuration
-└── README.md # This file
+│   └── mathjax.js       # MathJax configuration
+└── README.md            # This file
 ```
-
 
 ## Customization
 
@@ -110,6 +119,7 @@ The built site (in `site/`) can be deployed to any static hosting service.
 - **Build errors**: Check that all files referenced in `mkdocs.yml` exist
 - **Missing styles**: Ensure `extra.css` is in the correct location
 - **Math rendering**: Verify MathJax configuration in `mathjax.js`
+- **GitHub Pages not updating**: Check that the gh-pages branch exists and GitHub Pages is configured correctly
 
 ## Key Features for Reproducibility
 
@@ -120,10 +130,9 @@ The built site (in `site/`) can be deployed to any static hosting service.
 5. **Automated Setup**: Scripts and workflows for easy deployment
 6. **Cross-Platform**: Works on any system with Python
 
-## Usage Instructions for Template Users
+## After Making Changes
 
-1. **Clone the template**
-2. **Update `mkdocs.yml`** with their project details
-3. **Customize `docs/index.md`** for their specific research
-4. **Run `mkdocs serve`** to preview
-5. **Deploy** using GitHub Pages or other hosting
+When you update your research files (in `research-design/`, `methods/`, etc.):
+
+- **With GitHub Actions**: Just push your changes - the workflow handles everything automatically
+- **With manual setup**: Run `./setup_mkdocs.sh` again to sync changes to the docs directory

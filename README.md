@@ -138,7 +138,7 @@ This template includes a GitHub Actions workflow that automatically builds and d
 2. **Enable GitHub Pages** in your repository settings:
    - Go to Settings → Pages
    - Set "Source" to "Deploy from a branch"
-   - Select "gh-pages" branch
+   - Select "gh-pages" branch (will be created automatically by the workflow)
 3. **Update project details** in `mkdocs.yml`:
    ```yaml
    site_name: Your Project Name
