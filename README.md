@@ -3,6 +3,8 @@
 A structured, science-centered template to plan, document, and evolve a research project across its full lifecycle.
 Designed for clarity, reproducibility, and deep reasoning.
 
+View this template in [website format](https://www.shauritahutchins.com/phd-research-template/).
+
 ## Purpose
 
 This repository is designed for PhD students or researchers who want to scaffold their research project from hypothesis
