@@ -126,13 +126,67 @@ This template includes a complete MkDocs setup for creating a professional docum
 - **Search**: Built-in search functionality across all documents
 - **Responsive**: Works well on desktop and mobile devices
 
-**Quick Setup**:
-1. Install dependencies: `pip install -r requirements.txt`
-2. Customize `mkdocs.yml` with your project details
-3. Run `mkdocs serve` to preview locally
-4. Deploy to GitHub Pages or other hosting
+## Documentation Setup Options
 
-See [`docs/README.md`](docs/README.md) for detailed setup instructions.
+### Option 1: Automatic Setup (Recommended)
+
+This template includes a GitHub Actions workflow that automatically builds and deploys your documentation:
+
+1. **Fork or clone this repository**
+2. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Set "Source" to "GitHub Actions"
+3. **Update project details** in `mkdocs.yml`:
+   ```yaml
+   site_name: Your Project Name
+   site_author: Your Name
+   repo_name: your-repo-name
+   repo_url: https://github.com/yourusername/your-repo-name
+   ```
+4. **Push changes** to trigger automatic deployment
+5. **Your site will be available** at `https://yourusername.github.io/your-repo-name`
+
+The workflow automatically:
+- Runs the setup script to sync your research files
+- Builds the documentation site
+- Deploys to GitHub Pages
+- Updates on every push to main/master
+
+### Option 2: Manual Setup
+
+For local development or custom hosting:
+
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the setup script**:
+   ```bash
+   chmod +x setup_mkdocs.sh
+   ./setup_mkdocs.sh
+   ```
+
+3. **Customize configuration**:
+   - Update `mkdocs.yml` with your project details
+   - Modify `docs/index.md` for your specific project
+
+4. **Preview locally**:
+   ```bash
+   mkdocs serve
+   ```
+
+5. **Build for deployment**:
+   ```bash
+   mkdocs build
+   ```
+
+### After Making Changes
+
+When you update your research files (in `research-design/`, `methods/`, etc.):
+
+- **With GitHub Actions**: Just push your changes - the workflow handles everything automatically
+- **With manual setup**: Run `./setup_mkdocs.sh` again to sync changes to the docs directory
 
 ## Documentation Options
 
@@ -150,7 +204,7 @@ For a more professional presentation, this template includes MkDocs configuratio
 - **Mobile-responsive** design
 - **Easy sharing** with collaborators and advisors
 
-See [`docs/README.md`](docs/README.md) for complete setup instructions.
+See [`docs/README.md`](docs/README.md) for detailed setup instructions.
 
 ## Getting Started
 
@@ -158,7 +212,9 @@ See [`docs/README.md`](docs/README.md) for complete setup instructions.
 2. Fill in `README.md`, `project_pulse.md`, and `working_hypotheses.md`  
 3. Add your own tools, workflows, and project-specific markdowns  
 4. Regularly update `iteration_log.csv` and `project_timeline.md`  
-5. **Optional**: Set up MkDocs documentation site (see [`docs/README.md`](docs/README.md))
+5. **Choose your documentation setup**:
+   - **Automatic**: Enable GitHub Pages and push changes
+   - **Manual**: Follow the manual setup instructions above
 
 This is meant to evolve with you.
 
