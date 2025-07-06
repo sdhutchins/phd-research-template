@@ -3,7 +3,7 @@
 # Setup script for MkDocs research template
 # This script helps users quickly set up MkDocs for their research project
 
-echo "Setting up MkDocs Material for your research project..."
+echo "Setting up MkDocs for your research project..."
 
 # Check Python version
 python_version=$(python3 --version 2>&1 | awk '{print $2}' | cut -d. -f1,2)
@@ -30,35 +30,64 @@ if [ ! -d "docs" ]; then
     mkdir docs
 fi
 
-# Copy index.md if it doesn't exist
-if [ ! -f "docs/index.md" ]; then
-    echo "Creating index.md..."
-    cp docs/index.md.template docs/index.md 2>/dev/null || echo "Please create docs/index.md manually"
+# Create subdirectories in docs
+echo "Creating documentation structure..."
+mkdir -p docs/research-design
+mkdir -p docs/methods
+mkdir -p docs/results
+mkdir -p docs/tracking
+mkdir -p docs/collaboration
+mkdir -p docs/stylesheets
+mkdir -p docs/javascripts
+
+# Move markdown files to docs directory
+echo "Moving research files to docs directory..."
+
+# Move research-design files
+if [ -d "research-design" ]; then
+    echo "Moving research-design files..."
+    cp research-design/*.md docs/research-design/ 2>/dev/null || echo "No .md files found in research-design"
 fi
 
-# Create stylesheets directory if it doesn't exist
-if [ ! -d "docs/stylesheets" ]; then
-    echo "Creating stylesheets directory..."
-    mkdir -p docs/stylesheets
+# Move methods files
+if [ -d "methods" ]; then
+    echo "Moving methods files..."
+    cp methods/*.md docs/methods/ 2>/dev/null || echo "No .md files found in methods"
 fi
 
-# Create javascripts directory if it doesn't exist
-if [ ! -d "docs/javascripts" ]; then
-    echo "Creating javascripts directory..."
-    mkdir -p docs/javascripts
+# Move results files
+if [ -d "results" ]; then
+    echo "Moving results files..."
+    cp results/*.md docs/results/ 2>/dev/null || echo "No .md files found in results"
 fi
+
+# Move tracking files
+if [ -d "tracking" ]; then
+    echo "Moving tracking files..."
+    cp tracking/*.md docs/tracking/ 2>/dev/null || echo "No .md files found in tracking"
+    # Also copy CSV files
+    cp tracking/*.csv docs/tracking/ 2>/dev/null || echo "No .csv files found in tracking"
+fi
+
+# Move collaboration files
+if [ -d "collaboration" ]; then
+    echo "Moving collaboration files..."
+    cp collaboration/*.md docs/collaboration/ 2>/dev/null || echo "No .md files found in collaboration"
+fi
+
+# Move root-level files
+echo "Moving root-level documentation files..."
+cp glossary.md docs/ 2>/dev/null || echo "glossary.md not found"
+cp references.md docs/ 2>/dev/null || echo "references.md not found"
+cp LICENSE docs/LICENSE.md 2>/dev/null || echo "LICENSE not found"
 
 echo "Setup complete!"
 echo ""
 echo "Next steps:"
 echo "1. Update mkdocs.yml with your project details"
-echo "2. Customize docs/index.md for your project"
-echo "3. Run 'mkdocs serve' to preview your documentation"
-echo "4. Run 'mkdocs build' to build the static site"
+echo "2. Run 'mkdocs serve' to preview your documentation"
+echo "3. Run 'mkdocs build' to build the static site"
 echo ""
-echo "Material theme features:"
-echo "- Dark/light mode toggle"
-echo "- Search functionality"
-echo "- Responsive navigation"
-echo "- Code syntax highlighting"
-echo "- Math equation support" 
+echo "IMPORTANT: After making changes to your research files, run this script again"
+echo "to sync the changes to the docs directory:"
+echo "  ./setup_mkdocs.sh" 
