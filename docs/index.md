@@ -73,4 +73,4 @@ This template is designed to be easily adaptable. Feel free to:
 
 ## License
 
-This template is provided under the [MIT License](LICENSE). Use freely with attribution. 
+This template is provided under the [MIT License](LICENSE.md). Use freely with attribution. 
