@@ -32,6 +32,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: Setup MkDocs
+        run: |
+          # Run the setup script to copy files to docs/
+          chmod +x setup_mkdocs.sh
+          ./setup_mkdocs.sh
+          
       - name: Build
         run: mkdocs build
         
