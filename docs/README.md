@@ -4,14 +4,39 @@ This directory contains the MkDocs configuration and documentation files for the
 
 ## Quick Start
 
+### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Set "Source" to "Deploy from a branch"
+   - Select "gh-pages" branch
+   - Click Save
+
+2. **Update configuration**:
+   - Edit `mkdocs.yml` with your project details
+   - Update `docs/index.md` for your specific project
+
+3. **Push changes**:
+   ```bash
+   git add .
+   git commit -m "Update documentation"
+   git push
+   ```
+
+4. **Your site will be deployed automatically** to `https://yourusername.github.io/your-repo-name`
+
+### Manual Setup
+
 1. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Customize configuration**:
-   - Update `mkdocs.yml` with your project details
-   - Modify `docs/index.md` for your specific project
+2. **Run the setup script**:
+   ```bash
+   chmod +x setup_mkdocs.sh
+   ./setup_mkdocs.sh
+   ```
 
 3. **Preview your documentation**:
    ```bash
@@ -21,6 +46,11 @@ This directory contains the MkDocs configuration and documentation files for the
 4. **Build the site**:
    ```bash
    mkdocs build
+   ```
+
+5. **Deploy manually** (optional):
+   ```bash
+   mkdocs gh-deploy --force
    ```
 
 ## File Structure 

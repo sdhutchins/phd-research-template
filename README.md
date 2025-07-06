@@ -137,7 +137,8 @@ This template includes a GitHub Actions workflow that automatically builds and d
 1. **Fork or clone this repository**
 2. **Enable GitHub Pages** in your repository settings:
    - Go to Settings → Pages
-   - Set "Source" to "GitHub Actions"
+   - Set "Source" to "Deploy from a branch"
+   - Select "gh-pages" branch
 3. **Update project details** in `mkdocs.yml`:
    ```yaml
    site_name: Your Project Name
@@ -150,8 +151,8 @@ This template includes a GitHub Actions workflow that automatically builds and d
 
 The workflow automatically:
 - Runs the setup script to sync your research files
-- Builds the documentation site
-- Deploys to GitHub Pages
+- Builds the documentation site using Material for MkDocs
+- Deploys to the `gh-pages` branch
 - Updates on every push to main/master
 
 ### Option 2: Manual Setup
@@ -160,7 +161,7 @@ For local development or custom hosting:
 
 1. **Install dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install mkdocs-material
    ```
 
 2. **Run the setup script**:
@@ -181,6 +182,11 @@ For local development or custom hosting:
 5. **Build for deployment**:
    ```bash
    mkdocs build
+   ```
+
+6. **Deploy manually** (optional):
+   ```bash
+   mkdocs gh-deploy --force
    ```
 
 ### After Making Changes
