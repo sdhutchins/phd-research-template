@@ -3,7 +3,7 @@
 
 site_name: Research Project Documentation
 site_description: A structured, science-centered research documentation site
-site_author: [Your Name]
+site_author: Your Name
 site_url: https://yourusername.github.io/your-repo-name
 
 # Repository information - UPDATE THESE FOR YOUR PROJECT
@@ -18,29 +18,25 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - navigation.tracking
     - search.highlight
     - search.share
     - content.code.copy
-    - content.code.annotate
-    - content.tabs.link
-    - content.tooltips
   palette:
     - scheme: default
       primary: indigo
-      accent: indigo
+      accent: deep-purple
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - scheme: slate
       primary: indigo
-      accent: indigo
+      accent: deep-purple
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Open Sans
+    code: JetBrains Mono
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
@@ -93,6 +89,7 @@ nav:
     - Sustainability Notes: collaboration/sustainability_notes.md
   - Glossary: glossary.md
   - References: references.md
+  - License: LICENSE.md
 
 # Plugins
 plugins:
@@ -100,7 +97,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
 
-# Markdown extensions for Material theme
+# Markdown extensions (simplified)
 markdown_extensions:
   - admonition
   - attr_list
@@ -113,12 +110,6 @@ markdown_extensions:
       guess_lang: false
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
