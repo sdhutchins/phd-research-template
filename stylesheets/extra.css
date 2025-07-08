@@ -1,0 +1,99 @@
+/* Research Template - Custom Styles for Material Theme */
+
+/* Make tables more readable for research data */
+.md-typeset table {
+    font-size: 0.8rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-typeset table th {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    font-weight: 600;
+}
+
+/* Research-specific admonition styles */
+.md-typeset .admonition.research-note {
+    border-left-color: #2196f3;
+}
+
+.md-typeset .admonition.research-note .admonition-title {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+}
+
+.md-typeset .admonition.hypothesis {
+    border-left-color: #ff9800;
+}
+
+.md-typeset .admonition.hypothesis .admonition-title {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+}
+
+.md-typeset .admonition.method {
+    border-left-color: #4caf50;
+}
+
+.md-typeset .admonition.method .admonition-title {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+/* Better spacing for research documents */
+.md-content {
+    max-width: 1200px;
+}
+
+/* Style for hypothesis boxes */
+.hypothesis-box {
+    background-color: var(--md-default-bg-color);
+    border-left: 4px solid #ff9800;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Style for method boxes */
+.method-box {
+    background-color: var(--md-default-bg-color);
+    border-left: 4px solid #4caf50;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Better code block styling */
+.md-typeset code {
+    background-color: var(--md-code-bg-color);
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 0.85em;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .md-content {
+        max-width: 100%;
+    }
+}
+
+/* Custom navigation styling */
+.md-nav__link[for] {
+    color: var(--md-primary-fg-color);
+}
+
+/* Better search highlighting */
+.md-search-result__article--document .md-search-result__title {
+    color: var(--md-primary-fg-color);
+}
+
+/* Custom footer styling */
+.md-footer {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+} 
