@@ -62,6 +62,7 @@ Tracks data sources, assumptions, and analytical decisions.
 - `analysis_plan.md`: Primary and secondary analyses, including planned figures and outputs.  
 - `ethics_equity_practicalities.md`: Any IRB, consent, or inclusion/exclusion considerations relevant to your population or dataset.
 - `references.md`: Key tools that inform your methods.
+- `data_manifest.csv`: Structured list of datasets, including URLs, descriptions, and access methods.
 
 ### tracking  
 
@@ -140,16 +141,19 @@ This template includes a GitHub Actions workflow that automatically builds and d
    - Set "Source" to "Deploy from a branch"
    - Select "gh-pages" branch (will be created automatically by the workflow)
 3. **Update project details** in `mkdocs.yml`:
+
    ```yaml
    site_name: Your Project Name
    site_author: Your Name
    repo_name: your-repo-name
    repo_url: https://github.com/yourusername/your-repo-name
    ```
+
 4. **Push changes** to trigger automatic deployment
 5. **Your site will be available** at `https://yourusername.github.io/your-repo-name`
 
 The workflow automatically:
+
 - Runs the setup script to sync your research files
 - Builds the documentation site using Material for MkDocs
 - Deploys to the `gh-pages` branch
@@ -160,11 +164,13 @@ The workflow automatically:
 For local development or custom hosting:
 
 1. **Install dependencies**:
+
    ```bash
    pip install mkdocs-material
    ```
 
 2. **Run the setup script**:
+
    ```bash
    chmod +x setup_mkdocs.sh
    ./setup_mkdocs.sh
@@ -175,16 +181,19 @@ For local development or custom hosting:
    - Modify `docs/index.md` for your specific project
 
 4. **Preview locally**:
+
    ```bash
    mkdocs serve
    ```
 
 5. **Build for deployment**:
+
    ```bash
    mkdocs build
    ```
 
 6. **Deploy manually** (optional):
+
    ```bash
    mkdocs gh-deploy --force
    ```
@@ -199,14 +208,18 @@ When you update your research files (in `research-design/`, `methods/`, etc.):
 ## Documentation Options
 
 ### Markdown Files
+
 All research documentation is written in Markdown, making it easy to:
+
 - Version control with Git
 - Collaborate through GitHub
 - Edit with any text editor
 - Convert to various formats
 
 ### MkDocs Website (Recommended)
+
 For a more professional presentation, this template includes MkDocs configuration:
+
 - **Professional appearance** with search and navigation
 - **Automatic deployment** to GitHub Pages
 - **Mobile-responsive** design

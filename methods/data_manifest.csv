@@ -1,0 +1,3 @@
+Dataset ID,Repository,Title,Data Type,Download Date,Version,Description,Number of Samples,Format,License/Restrictions,Location/Path,Principal Investigator/Submitter,Associated Publications,Checksum/Validation
+GSE123456,GEO,RNA-seq of Lung Tissue,RNA-seq,9/27/24,1,RNA-seq data of lung tissue samples for differential expression analysis,100 samples,FASTQ,CC BY 4.0,/project/data/GSE123456/,Dr. Smith,,
+phs001789,dbGaP,Whole Genome Sequencing,WGS,8/15/24,1.1,WGS data from dbGaP for genetic modifier study,50 samples,VCF,dbGaP controlled access,/project/data/phs001789/,Dr. Doe,,
